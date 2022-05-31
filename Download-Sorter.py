@@ -27,7 +27,7 @@ for file in filename:
     else:
         os.mkdir(mediaLocation)
         
-    elif os.path.splitext(file)[1] in documents:
+    if os.path.splitext(file)[1] in documents:
         if(path.exists(DocumentsLocation)):
             shutil.move(file,DocumentsLocation)
         else:
