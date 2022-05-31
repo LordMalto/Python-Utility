@@ -27,60 +27,60 @@ for file in filename:
     else:
         os.mkdir(mediaLocation)
         
-    if os.path.splitext(file)[1] in documents:
+    elif os.path.splitext(file)[1] in documents:
         if(path.exists(DocumentsLocation)):
             shutil.move(file,DocumentsLocation)
         else:
             os.mkdir(DocumentsLocation)
             shutil.move(file,DocumentsLocation)
-    if os.path.splitext(file)[1] in images:
+    elif os.path.splitext(file)[1] in images:
         if(path.exists(imagesLocation)):
             shutil.move(file,imagesLocation)
         else:
             os.mkdir(imagesLocation)
             shutil.move(file,imagesLocation)
-    if os.path.splitext(file)[1] in setupFiles:
+    elif os.path.splitext(file)[1] in setupFiles:
         if(path.exists(setupFilesLocation)):
             shutil.move(file,setupFilesLocation)
         else:
             os.mkdir(setupFilesLocation)
             shutil.move(file,setupFilesLocation)
-    if os.path.splitext(file)[1] in compressedFiles:
+    elif os.path.splitext(file)[1] in compressedFiles:
         if(path.exists(compressedFilesLocation)):
             shutil.move(file,compressedFilesLocation)
         else:
             os.mkdir(compressedFilesLocation)
             shutil.move(file,compressedFilesLocation)
-    if os.path.splitext(file)[1] in video:
+    elif os.path.splitext(file)[1] in video:
         if(path.exists(videosLocation)):
             shutil.move(file,videosLocation)
         else:
             os.mkdir(videosLocation)
             shutil.move(file,videosLocation)
-    if os.path.splitext(file)[1] in gif:
+    elif os.path.splitext(file)[1] in gif:
         if(path.exists(gifLocation)):
             shutil.move(file,gifLocation)
         else:
             os.mkdir(gifLocation)
             shutil.move(file,gifLocation)
-    if os.path.splitext(file)[1] in audio:
+    elif os.path.splitext(file)[1] in audio:
         if(path.exists(audioLocation)):
             shutil.move(file,audioLocation)
         else:
             os.mkdir(audioLocation)
             shutil.move(file,audioLocation)
-    if os.path.splitext(file)[1] in audio:
+    elif os.path.splitext(file)[1] in audio:
         if(path.exists(audioLocation)):
             shutil.move(file,audioLocation)
         else:
             os.mkdir(audioLocation)
             shutil.move(file,audioLocation)
 
-    if os.path.exists(othersLocation):
+    elif os.path.exists(othersLocation):
         shutil.move(file, othersLocation)
     else:
         os.mkdir(othersLocation)
         shutil.move(file, othersLocation)
 
 time.sleep(1200)
-os.startfile('C:\\Users\\malte\\OneDrive\\Download-Sorter.py') 
+os.startfile('C:\\Download-Sorter.py') 
