@@ -3,7 +3,7 @@ import os
 import glob
 import shutil
 from os import path
-filename=glob.glob("C:/Users/malte/Downloads/*")
+filename=glob.glob("C:/Example") # Insert downloads folder path
 documents=['.pdf','.docx','.doc','.txt', '.excel', '.odt', '.xslx', '.log', '.accdb']
 images=['.jpeg','.jpg','.svg','.png','.PNG']
 video=['.mp4', '.webm', '.mov', '.ogg', '.mng', '.wmv', '.rm', '.viv', '.amv']
@@ -11,6 +11,7 @@ gif =['.gif', '.gifv']
 audio = ['.mp3', '.wav', '.m4a', '.flac', '.mp2', '.ac3', '.amr', '.wma', '.la', '.ape', '.thd', '.wma']
 setupFiles=['.exe','.msi', '.iso']
 compressedFiles=['.zip', '.rar']
+# Insert target location below
 DocumentsLocation='D:/Download-Sort-Py/docs'
 mediaLocation='D:/Download-Sort-Py/Media'
 imagesLocation='D:/Download-Sort-Py/Media/Images'
@@ -82,5 +83,5 @@ for file in filename:
         os.mkdir(othersLocation)
         shutil.move(file, othersLocation)
 
-time.sleep(1200)
-os.startfile('C:\\Download-Sorter.py') 
+time.sleep(1200) # Restart timer | Default: 20 Minutes
+os.startfile('C:\Example\Download-Sorter.py') # Insert path to Sorter file so it can restart every 20 Minutes
